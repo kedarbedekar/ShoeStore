@@ -1,17 +1,24 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset some basic styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #333;
+    background: #007BFF; /* Bootstrap Primary Color */
     color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -19,65 +26,148 @@ header {
     align-items: center;
 }
 
-.logo-img {
-    width: 50px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
+.logo img {
+    width: 50px; /* Logo size */
+    height: auto;
     margin-right: 10px; /* Space between logo and text */
+}
+
+h1 {
+    font-size: 24px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
+    padding: 10px;
+    margin: 0 10px;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #FFD700; /* Gold color for hover effect */
 }
 
 .hero {
     text-align: center;
-    padding: 50px;
-    background-color: #007BFF;
+    background: #e2e2e2;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.shop-now {
+    background: #007BFF; /* Primary color */
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.shop-now:hover {
+    background: #0056b3; /* Darker shade for hover */
 }
 
 .product-categories {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
     padding: 20px;
-    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px; /* Centering the product category */
 }
 
 .category {
-    text-align: center;
-    margin: 20px;
-    background-color: white;
+    background: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 200px; /* Adjust width for better responsiveness */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: box-shadow 0.3s;
 }
 
 .category img {
-    width: 100%; /* Responsive image */
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.category h2 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.category p {
+    font-size: 14px;
+    color: #666;
+}
+
+.category:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
 }
 
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #333;
+    padding: 20px;
+    background: #007BFF; /* Matching footer color */
     color: white;
 }
 
 footer a {
-    color: #f4f4f4;
+    color: #FFD700; /* Gold color for links */
     text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Cart Modal Styles */
+#cart-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+#cart-modal h2 {
+    margin-bottom: 15px;
+}
+
+#cart-modal .close {
+    cursor: pointer;
+    float: right;
+    font-size: 18px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .product-categories {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
 }
