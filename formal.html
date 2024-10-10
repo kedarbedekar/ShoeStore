@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formal Shoes | Shop Elegant Formal Shoes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>ShoeStore</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <section class="category-hero">
+        <h2>Formal Shoes</h2>
+        <p>Elegant and professional shoes for formal occasions.</p>
+    </section>
+
+    <section class="product-list">
+        <div class="product">
+            <img src="formal1.jpg" alt="Formal Shoe 1">
+            <h2>Classic Black Formal Shoes</h2>
+            <p>Price: $90</p>
+            <button onclick="addToCart('Classic Black Formal Shoes', 90)">Add to Cart</button>
+            <button onclick="viewDetails('product1.html')">View Details</button>
+        </div>
+
+        <div class="product">
+            <img src="formal2.jpg" alt="Formal Shoe 2">
+            <h2>Leather Brown Formal Shoes</h2>
+            <p>Price: $95</p>
+            <button onclick="addToCart('Leather Brown Formal Shoes', 95)">Add to Cart</button>
+            <button onclick="viewDetails('product2.html')">View Details</button>
+        </div>
+
+        <div class="product">
+            <img src="formal3.jpg" alt="Formal Shoe 3">
+            <h2>Modern Formal Shoes</h2>
+            <p>Price: $120</p>
+            <button onclick="addToCart('Modern Formal Shoes', 120)">Add to Cart</button>
+            <button onclick="viewDetails('product3.html')">View Details</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 ShoeStore | Connect with me on <a href="https://www.linkedin.com/in/kedar-bedekar-6a2b481b2" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
