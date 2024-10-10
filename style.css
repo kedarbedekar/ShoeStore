@@ -6,19 +6,20 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
 }
 
 header {
-    background: #007BFF; /* Bootstrap Primary Color */
+    background: #4B9CD3; /* Primary color */
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -27,13 +28,14 @@ header {
 }
 
 .logo img {
-    width: 50px; /* Logo size */
+    width: 60px; /* Logo size */
     height: auto;
     margin-right: 10px; /* Space between logo and text */
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 26px;
+    font-weight: 700;
 }
 
 nav a {
@@ -42,46 +44,51 @@ nav a {
     padding: 10px;
     margin: 0 10px;
     transition: color 0.3s;
+    border-bottom: 2px solid transparent; /* Underline effect */
 }
 
 nav a:hover {
     color: #FFD700; /* Gold color for hover effect */
+    border-bottom: 2px solid #FFD700; /* Underline effect */
 }
 
 .hero {
     text-align: center;
-    background: #e2e2e2;
-    padding: 40px 20px;
+    background: #e2e8f0; /* Light gray */
+    padding: 60px 20px;
     margin-bottom: 20px;
+    border-radius: 8px; /* Rounded corners */
 }
 
 .hero h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 34px;
+    margin-bottom: 15px;
 }
 
 .hero p {
     font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .shop-now {
-    background: #007BFF; /* Primary color */
+    background: #4B9CD3; /* Primary color */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s; /* Added transform */
 }
 
 .shop-now:hover {
-    background: #0056b3; /* Darker shade for hover */
+    background: #3B7CA3; /* Darker shade for hover */
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
 .product-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
     margin: 0 auto;
@@ -94,7 +101,8 @@ nav a:hover {
     border-radius: 8px;
     text-align: center;
     padding: 20px;
-    transition: box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Added to contain floated elements */
 }
 
 .category img {
@@ -104,24 +112,27 @@ nav a:hover {
 }
 
 .category h2 {
-    font-size: 20px;
+    font-size: 22px;
     margin: 15px 0;
+    color: #4B9CD3; /* Primary color */
 }
 
 .category p {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
 }
 
 .category:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background: #007BFF; /* Matching footer color */
+    background: #4B9CD3; /* Matching footer color */
     color: white;
+    position: relative;
 }
 
 footer a {
@@ -160,11 +171,11 @@ footer a:hover {
 /* Responsive styles */
 @media (max-width: 768px) {
     .hero {
-        padding: 20px;
+        padding: 30px;
     }
 
     .hero h2 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .product-categories {
