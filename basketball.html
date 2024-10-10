@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Shoes | Shop Basketball Footwear</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>ShoeStore</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <section class="category-hero">
+        <h2>Basketball Shoes</h2>
+        <p>High-performance basketball shoes designed for the court.</p>
+    </section>
+
+    <section class="product-list">
+        <div class="product">
+            <img src="basketball1.jpg" alt="Basketball Shoe 1">
+            <h2>Pro Basketball Sneakers</h2>
+            <p>Price: $75</p>
+            <button onclick="addToCart('Pro Basketball Sneakers', 75)">Add to Cart</button>
+            <button onclick="viewDetails('product1.html')">View Details</button>
+        </div>
+
+        <div class="product">
+            <img src="basketball2.jpg" alt="Basketball Shoe 2">
+            <h2>Durable Court Shoes</h2>
+            <p>Price: $90</p>
+            <button onclick="addToCart('Durable Court Shoes', 90)">Add to Cart</button>
+            <button onclick="viewDetails('product2.html')">View Details</button>
+        </div>
+
+        <div class="product">
+            <img src="basketball3.jpg" alt="Basketball Shoe 3">
+            <h2>Performance Basketball Shoes</h2>
+            <p>Price: $110</p>
+            <button onclick="addToCart('Performance Basketball Shoes', 110)">Add to Cart</button>
+            <button onclick="viewDetails('product3.html')">View Details</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 ShoeStore | Connect with me on <a href="https://www.linkedin.com/in/kedar-bedekar-6a2b481b2" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
