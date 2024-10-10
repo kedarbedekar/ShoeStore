@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casual Shoes | Shop Comfortable Casual Shoes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>ShoeStore</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <section class="category-hero">
+        <h2>Casual Shoes</h2>
+        <p>Stylish and comfortable shoes for everyday wear.</p>
+    </section>
+
+    <section class="product-list">
+        <div class="product">
+            <img src="casual1.jpg" alt="Casual Shoe 1">
+            <h2>Classic Casual Shoes</h2>
+            <p>Price: $50</p>
+            <button onclick="addToCart('Classic Casual Shoes', 50)">Add to Cart</button>
+            <button onclick="viewDetails('product1.html')">View Details</button>
+        </div>
+
+        <div class="product">
+            <img src="casual2.jpg" alt="Casual Shoe 2">
+            <h2>Sneaker Style Casual Shoes</h2>
+            <p>Price: $65</p>
+            <button onclick="addToCart('Sneaker Style Casual Shoes', 65)">Add to Cart</button>
+            <button onclick="viewDetails('product2.html')">View Details</button>
+        </div>
+
+        <div class="product">
+            <img src="casual3.jpg" alt="Casual Shoe 3">
+            <h2>Leather Casual Shoes</h2>
+            <p>Price: $85</p>
+            <button onclick="addToCart('Leather Casual Shoes', 85)">Add to Cart</button>
+            <button onclick="viewDetails('product3.html')">View Details</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 ShoeStore | Connect with me on <a href="https://www.linkedin.com/in/kedar-bedekar-6a2b481b2" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
