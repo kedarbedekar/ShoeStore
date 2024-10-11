@@ -20,7 +20,8 @@ function addToCart(productName, productPrice) {
     }
 
     updateCartCount(); // Update the cart count in the navigation
-    console.log(cart); // For debugging purposes
+    updateCartTotal(); // Update the cart total
+    saveCart(); // Save the updated cart to localStorage
 }
 
 // Function to update the cart count in the navigation
@@ -29,13 +30,25 @@ function updateCartCount() {
     document.getElementById('cart-count').innerText = cartCount; // Update count in the header
 }
 
+// Function to update the cart total
+function updateCartTotal() {
+    const cartTotal = cart.reduce((total, product) => total + (product.price * product.quantity), 0);
+    const totalElement = document.getElementById('cart-total');
+    if (totalElement) {
+        totalElement.innerText = cartTotal.toFixed(2); // Display total price (2 decimal places)
+    }
+}
+
 // Function to handle the Shop Now button click
 function shopNow() {
     window.location.href = 'Running_Shoes.html'; // Redirect to the product category page
 }
 
 // Attach event listener to the Shop Now button
-document.querySelector('.shop-now').addEventListener('click', shopNow);
+const shopNowButton = document.querySelector('.shop-now');
+if (shopNowButton) {
+    shopNowButton.addEventListener('click', shopNow);
+}
 
 // Function to view product details (redirects to individual product pages)
 function viewDetails(productPage) {
@@ -53,6 +66,7 @@ function loadCart() {
     if (savedCart) {
         cart = JSON.parse(savedCart); // Parse JSON string back into an array
         updateCartCount(); // Update cart count on load
+        updateCartTotal(); // Update cart total on load
     }
 }
 
@@ -61,3 +75,12 @@ window.onload = loadCart;
 
 // Save cart data when the user leaves the page
 window.onbeforeunload = saveCart;
+
+// Function to clear the cart
+function clearCart() {
+    cart = []; // Clear the cart array
+    updateCartCount(); // Reset cart count
+    updateCartTotal(); // Reset cart total
+    saveCart(); // Save the empty cart to localStorage
+    document.getElementById('cart-items').innerHTML = ''; // Clear cart items from the display
+}
